@@ -1,0 +1,13 @@
+.main_container {
+	min-height: 89vh;
+	width: 80%;
+	overflow: hidden;
+}
+
+.main_show {
+	display: flex;
+	flex-flow: row;
+	justify-content: flex-end;
+	gap: 5px;
+	padding: 1em;
+}

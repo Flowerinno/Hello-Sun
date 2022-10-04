@@ -1,0 +1,11 @@
+.welcome {
+	min-height: 89vh;
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-flow: column;
+	gap: 2.5em;
+    position: absolute;
+    overflow: hidden;
+}

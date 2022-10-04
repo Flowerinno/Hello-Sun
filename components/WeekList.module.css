@@ -1,0 +1,29 @@
+.weekList_container {
+	width: 100%;
+	display: flex;
+	flex-flow: row;
+	padding: 20px;
+	gap: 1%;
+	height: 20%;
+}
+
+.weekList_item {
+	border: 0.2px solid rgba(224, 209, 209, 0.822);
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	padding: 1em;
+	align-items: center;
+	width: 10.5%;
+	border-radius: 20px;
+}
+
+.weekList_item p {
+	padding: 0;
+	margin: 0;
+}
+.weekList_item h1 {
+    font-size: 20px;
+	padding: 0;
+	margin: 0;
+}
