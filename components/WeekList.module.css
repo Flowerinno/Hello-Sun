@@ -18,6 +18,10 @@
 	border-radius: 20px;
 }
 
+
+.weekList_item:hover {
+	scale: 1.1;
+}
 .weekList_item p {
 	padding: 0;
 	margin: 0;

@@ -1,4 +1,3 @@
-import type { NextPage } from "next";
 import Head from "next/head";
 import Main from "../components/Main";
 import Sidebar from "../components/Sidebar";
@@ -15,7 +14,7 @@ const Home = ({ data, weekData }: any) => {
 				<link rel="icon" href="/logo.png" />
 			</Head>
 			<Sidebar data={data} />
-			<Main weekData={weekData} />
+			<Main weekData={weekData} data={data} />
 		</div>
 	);
 };

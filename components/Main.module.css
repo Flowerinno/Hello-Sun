@@ -11,3 +11,8 @@
 	gap: 5px;
 	padding: 1em;
 }
+
+.main_content {
+	display: flex;
+	flex-flow: column;
+}
