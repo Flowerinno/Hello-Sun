@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { Input } from "@nextui-org/react";
+import { FormElement, Input } from "@nextui-org/react";
 import styles from "../styles/Welcome.module.css";
 import { Button, Loading } from "@nextui-org/react";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { Text } from "@nextui-org/react";
 import Image from "next/image";
@@ -12,7 +11,7 @@ const Welcome = () => {
 	const router = useRouter();
 	const pattern = /(?:^|[^A-Z])[A-Z](?![A-Z])/;
 
-	const inputHandler = (e: any) => {
+	const inputHandler = (e: React.ChangeEvent<FormElement>) => {
 		if (pattern.test(e.target.value) === true) {
 			setValid(true);
 			setInput(e.target.value);

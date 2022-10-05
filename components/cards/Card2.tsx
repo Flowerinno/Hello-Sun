@@ -1,6 +1,7 @@
 import { Card, Col, Text } from "@nextui-org/react";
 
-export const Card2 = ({humidity}: any) => (
+type Card2 = { humidity: number }
+export const Card2: React.FC<Card2> = ({humidity}: Card2) => (
 	<Card isHoverable>
 		<Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
       <Col>

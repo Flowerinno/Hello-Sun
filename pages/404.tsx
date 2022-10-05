@@ -1,9 +1,9 @@
 import { Text, Link } from "@nextui-org/react";
-
 import NextLink from "next/link";
 import React from "react";
 import styles from "../styles/404.module.css";
-const ErrorPage = () => {
+
+const ErrorPage: React.FC = () => {
 	return (
 		<div className={styles.error}>
 			<Text size={30} weight="bold" color="red">

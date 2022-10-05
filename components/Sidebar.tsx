@@ -1,15 +1,14 @@
-import { Input, Spacer } from "@nextui-org/react";
+import { FormElement, Input } from "@nextui-org/react";
 import styles from "./Sidebar.module.css";
 import React, { useState } from "react";
 import Image from "next/image";
-import { Button, Grid } from "@nextui-org/react";
+import { Button } from "@nextui-org/react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { Text } from "@nextui-org/react";
-import { SidebarProps } from "../types/forecastType";
+import { OneDayProps } from "../types/forecastType";
 
-
-const Sidebar: React.FC<SidebarProps> = ({ data }) => {
+const Sidebar: React.FC<OneDayProps> = ({ data }) => {
 	const [input, setInput] = useState("");
 	const [valid, setValid] = useState(true);
 	const date = data.current.last_updated;
@@ -17,7 +16,7 @@ const Sidebar: React.FC<SidebarProps> = ({ data }) => {
 	const router = useRouter();
 	const pattern = /(?:^|[^A-Z])[A-Z](?![A-Z])/;
 
-	const inputHandler = (e: any) => {
+	const inputHandler = (e: React.ChangeEvent<FormElement>) => {
 		if (pattern.test(e.target.value) === true) {
 			setValid(true);
 			setInput(e.target.value);
@@ -56,7 +55,9 @@ const Sidebar: React.FC<SidebarProps> = ({ data }) => {
 						Weather
 					</Button>
 				</div>
-				{!valid && <Text color="error">Please enter a valid location! (Upper case)</Text>}
+				{!valid && (
+					<Text color="error">Please enter a valid location! (Upper case)</Text>
+				)}
 			</div>
 
 			<Image

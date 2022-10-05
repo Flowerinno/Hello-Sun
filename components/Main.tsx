@@ -3,8 +3,9 @@ import styles from "./Main.module.css";
 import React, { useState } from "react";
 import WeekList from "./WeekList";
 import TodayInfo from "./TodayInfo";
+import { OneDayProps, WeekDataType } from "../types/forecastType";
 
-const Main: React.FC = ({ data, weekData }: any) => {
+const Main: React.FC<OneDayProps & WeekDataType> = ({ data, weekData }) => {
 	const [weekInfo, setWeekInfo] = useState(false);
 	return (
 		<div className={styles.main_container}>

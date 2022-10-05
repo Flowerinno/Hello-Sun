@@ -1,12 +1,10 @@
 import styles from "./WeekList.module.css";
-
+import { WeekDataType } from "../types/forecastType";
 import React from "react";
 import Image from "next/image";
 
-const WeekList: React.FC = ({ weekData }: any) => {
-	const uniqueForecast = weekData.forecast.forecastday;
-	console.log(uniqueForecast);
-	const forecastList = weekData.forecast.forecastday.map((weather: any) => {
+const WeekList: React.FC<WeekDataType> = ({ weekData }) => {
+	const forecastList = weekData.forecast.forecastday.map((weather) => {
 		const dateMs = weather.date_epoch * 1000;
 		const day = new Date(dateMs);
 		const currDay = day.toString().split(" ")[0];
@@ -20,7 +18,7 @@ const WeekList: React.FC = ({ weekData }: any) => {
 					width="50px"
 					height="50px"
 				/>
-				<h1>Average {weather.day.avgtemp_c}°C</h1>
+				<h1>Average {weather.day.avhtemp_c}°C</h1>
 				<p>{weather.day.condition.text}</p>
 			</div>
 		);

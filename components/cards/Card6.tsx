@@ -1,6 +1,6 @@
 import { Card, Col, Text } from "@nextui-org/react";
-
-export const Card6 = ({ tempF }: any) => (
+type Card6 = { tempF: number };
+export const Card6: React.FC<Card6> = ({ tempF }: Card6) => (
 	<Card isHoverable>
 		<Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
 			<Col>

@@ -1,6 +1,9 @@
 import { Card, Col, Text, Grid } from "@nextui-org/react";
+import { OneDayProps } from "../../types/forecastType";
 
-export const Card1 = ({ uv }: any) => (
+type Card1 = { uv: number }
+
+export const Card1: React.FC<Card1> = ({ uv }: Card1) => (
 	<Card isHoverable>
 		<Card.Image
 			src="https://www.light-sources.com/wp-content/uploads/2021/03/Various-uses-of-UV-light.jpg"

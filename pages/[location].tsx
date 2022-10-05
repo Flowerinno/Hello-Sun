@@ -4,8 +4,9 @@ import Sidebar from "../components/Sidebar";
 import styles from "../styles/Home.module.css";
 import { GetServerSideProps } from "next";
 import { fetchHandler } from "../services/fetchData";
+import { OneDayProps, WeekDataType } from "../types/forecastType";
 
-const Home = ({ data, weekData }: any) => {
+const Home: React.FC<OneDayProps & WeekDataType> = ({ data, weekData }) => {
 	return (
 		<div className={styles.container}>
 			<Head>
