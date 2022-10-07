@@ -5,6 +5,7 @@ import { Button, Loading } from "@nextui-org/react";
 import { useRouter } from "next/router";
 import { Text } from "@nextui-org/react";
 import Image from "next/image";
+import Head from "next/head";
 const Welcome = () => {
 	const [input, setInput] = useState("");
 	const [valid, setValid] = useState(true);
@@ -28,11 +29,16 @@ const Welcome = () => {
 	};
 	return (
 		<div className={styles.welcome}>
+			<Head>
+				<title>Hello-sun forecast</title>
+				<meta content="Hello Sun" name="hello sun home page" />
+			</Head>
 			<Image
 				src="/hellosun.jpg"
 				alt="logo hello-sun"
 				width="250"
 				height="250"
+				data-testid='logo'
 			/>
 			<Input
 				width="450px"
@@ -49,7 +55,8 @@ const Welcome = () => {
 					bordered
 					color="warning"
 					css={{ width: "100px" }}
-					aria-label="loading"
+					aria-label="loading button"
+					data-testid='disabledbutton'
 				>
 					<Loading type="points-opacity" color="currentColor" size="sm" />
 				</Button>
@@ -62,6 +69,7 @@ const Welcome = () => {
 						width: "100px",
 						backgroundColor: "black",
 					}}
+					data-testid='activebutton'
 				>
 					Weather
 				</Button>

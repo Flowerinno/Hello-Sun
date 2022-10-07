@@ -1,4 +1,4 @@
-import { Button } from "@nextui-org/react";
+import { Button , Text} from "@nextui-org/react";
 import styles from "./Main.module.css";
 import React, { useState } from "react";
 import WeekList from "./WeekList";
@@ -7,20 +7,19 @@ import { OneDayProps, WeekDataType } from "../types/forecastType";
 
 const Main: React.FC<OneDayProps & WeekDataType> = ({ data, weekData }) => {
 	const [weekInfo, setWeekInfo] = useState(false);
+
 	return (
 		<div className={styles.main_container}>
 			<span className={styles.main_show}>
-				<Button bordered color="gradient" shadow auto ghost size="lg">
-					Today
-				</Button>
-				<Button bordered color="gradient" shadow auto ghost size="lg" onClick={() => setWeekInfo(!weekInfo)}>
-					Week
+				<Button role='weekbutton' bordered color="gradient" shadow auto ghost size="lg" onClick={() => setWeekInfo(!weekInfo)}>
+					Week forecast
 				</Button>
 			</span>
 			<main className={styles.main_content}>
 				{weekInfo && <WeekList weekData={weekData} />}
 				<TodayInfo data={data} />
 			</main>
+
 		</div>
 	);
 };

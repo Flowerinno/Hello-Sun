@@ -1,7 +1,7 @@
 import { Card, Col, Text, Grid } from "@nextui-org/react";
 import { OneDayProps } from "../../types/forecastType";
 
-type Card1 = { uv: number }
+type Card1 = { uv: number };
 
 export const Card1: React.FC<Card1> = ({ uv }: Card1) => (
 	<Card isHoverable>
@@ -17,7 +17,7 @@ export const Card1: React.FC<Card1> = ({ uv }: Card1) => (
 				<Text size={20} weight="bold" transform="uppercase" color="white">
 					UV index
 				</Text>
-				<Text h4 color="white" size={20}>
+				<Text h4 color="white" size={20} role="textinfo">
 					Ultraviolet - {uv}
 				</Text>
 			</Col>

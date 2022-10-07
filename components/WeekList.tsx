@@ -11,19 +11,20 @@ const WeekList: React.FC<WeekDataType> = ({ weekData }) => {
 
 		return (
 			<div key={weather.date_epoch} className={styles.weekList_item}>
-				<span>{currDay}</span>
+				<span role='day'>{currDay}</span>
 				<Image
 					alt="days"
 					src={`http:${weather.day.condition.icon}`}
 					width="50px"
 					height="50px"
+					role='forecastimage'
 				/>
-				<h1>Average {weather.day.avhtemp_c}°C</h1>
+				<h1 role='avhtemp'>Average {weather.day.avhtemp_c}°C</h1>
 				<p>{weather.day.condition.text}</p>
 			</div>
 		);
 	});
-	return <span className={styles.weekList_container}>{forecastList}</span>;
+	return <span role='forecastlist' className={styles.weekList_container}>{forecastList}</span>;
 };
 
 export default WeekList;

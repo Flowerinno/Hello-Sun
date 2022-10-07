@@ -7,7 +7,7 @@ export const Card6: React.FC<Card6> = ({ tempF }: Card6) => (
 				<Text size={20} weight="bold" transform="uppercase" color="black">
 					Temperature - Fahrenheit
 				</Text>
-				<Text h4 color="white" size={20}>
+				<Text h4 color="white" size={20} role='tempf'>
 					{tempF}
 				</Text>
 			</Col>

@@ -21,7 +21,7 @@ const TodayInfo: React.FC<OneDayProps> = ({ data }: OneDayProps) => {
 			>
 				Today{`'`}s highlights
 			</h1>
-			<div>
+			<div role="container">
 				<Grid.Container gap={2} justify="center">
 					<Grid xs={4}>
 						<Card1 uv={data.current.uv} />

@@ -34,10 +34,7 @@ const Sidebar: React.FC<OneDayProps> = ({ data }) => {
 	};
 	return (
 		<div className={styles.sidebar_container}>
-			<Head>
-				<title>{`${data.location.name}`} weather</title>
-				<meta property="og:title" content="weather hello-sun" key="title" />
-			</Head>
+			
 
 			<div className={styles.sidebar_header}>
 				<div className={styles.sidebar_input}>
@@ -47,16 +44,16 @@ const Sidebar: React.FC<OneDayProps> = ({ data }) => {
 						width="80%"
 						status="default"
 						clearable={true}
-						aria-label="search-input"
 						value={input}
 						onChange={inputHandler}
+						role='sidebarinput'
 					/>
 					<Button color="gradient" auto ghost onClick={clickHandler}>
 						Weather
 					</Button>
 				</div>
 				{!valid && (
-					<Text color="error">Please enter a valid location! (Upper case)</Text>
+					<Text color="error" role='error'>Please enter a valid location! (Upper case)</Text>
 				)}
 			</div>
 
@@ -78,14 +75,14 @@ const Sidebar: React.FC<OneDayProps> = ({ data }) => {
 					>
 						{data.location.name}
 					</Text>
-					<h2>{data.current.temp_c}°C</h2>
+					<h2 role='temp'>{data.current.temp_c}°C</h2>
 					<p>
 						{dateValues}, {timeValues}
 					</p>
 				</span>
 				<div className={styles.sidebar_temp2}>
 					<p>{data.current.condition.text}</p>
-					<p>{data.current.wind_mph} - wind mph</p>
+					<p role='wind'>{data.current.wind_mph} - wind mph</p>
 				</div>
 			</main>
 		</div>
