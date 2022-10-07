@@ -1,7 +1,7 @@
 import { Text, Link } from "@nextui-org/react";
 import NextLink from "next/link";
 import React from "react";
-import styles from "../styles/404.module.css";
+import styles from "../styles/Error.module.css";
 
 const ErrorPage: React.FC = () => {
 	return (
