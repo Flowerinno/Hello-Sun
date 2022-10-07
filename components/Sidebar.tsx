@@ -48,7 +48,7 @@ const Sidebar: React.FC<OneDayProps> = ({ data }) => {
 						onChange={inputHandler}
 						role='sidebarinput'
 					/>
-					<Button color="gradient" auto ghost onClick={clickHandler}>
+					<Button color="gradient" disabled={!valid} auto ghost onPress={clickHandler}>
 						Weather
 					</Button>
 				</div>

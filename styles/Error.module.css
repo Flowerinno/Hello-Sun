@@ -1,7 +1,15 @@
 .error {
-    height: 100vh;
+	height: 100vh;
 	display: flex;
 	flex-flow: column;
 	justify-content: center;
 	align-items: center;
+	gap: 0.5em;
+}
+
+.home_button:hover {
+	color: goldenrod;
+}
+.cats_button:hover {
+	color: goldenrod;
 }

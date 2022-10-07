@@ -63,7 +63,7 @@ const Welcome = () => {
 			)}
 			{input.length >= 2 && valid && (
 				<Button
-					onClick={submitHandler}
+					onPress={submitHandler}
 					auto
 					css={{
 						width: "100px",

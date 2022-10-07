@@ -11,7 +11,7 @@ const Main: React.FC<OneDayProps & WeekDataType> = ({ data, weekData }) => {
 	return (
 		<div className={styles.main_container}>
 			<span className={styles.main_show}>
-				<Button role='weekbutton' bordered color="gradient" shadow auto ghost size="lg" onClick={() => setWeekInfo(!weekInfo)}>
+				<Button role='weekbutton' bordered color="gradient" shadow auto ghost size="lg" onPress={() => setWeekInfo(!weekInfo)}>
 					Week forecast
 				</Button>
 			</span>
